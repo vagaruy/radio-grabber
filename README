@@ -1,0 +1,24 @@
+THIS IS A PROGRAM THAT DOES A LOT OF RANDOM THINGS.HOPEFULLY LATER IN LIFE I CAN USE THESE PACKAGES TO MAKE SOMETHING USEFUL
+
+1.radio.py  ---THis is the one that listens to the streams and then adds the song to the database.
+
+2.mp3.py --- Sends request to the website www.beemp3.com and then scrapes beemp3 links to the songs alongwith some other details and stores in database
+
+3.mp4.py ---  The links got in the previous example are beemp3 encrypted.this one gets the actual links by using a combination of captcha solving and another software called imacros.
+
+4.grive1.py --- uses the google drive sdk to store a backup of the /radio from the server to teh google drive.makes a tar ball of teh folder, uploads and then removes the folder.
+
+5.radiostream.db --the main database storing everything.th schem is as follows
+
+Songs Checked:5034	CREATE TABLE SongLink(File TEXT,Song TEXT,Artist TEXT,Album TEXT,Genre TEXT,Duration TEXT,Bitrate TEXT,Domain TEXT,Beeid TEXT,Dlink TEXT);
+	      5043	CREATE TABLE Songs (Song TEXT UNIQUE, Stream TEXT);
+			CREATE TABLE Stations(station TEXT UNIQUE, Genre TEXT);
+			CREATE TABLE Urls(Beeid TEXT,Dlink TEXT);
+				
+					
+
+
+In the process of working!!
+				
+6.youskim.py	--a youtube skimmer to search the songs in youtube and download them from here...-->>could be the most reliable solution available...
+
